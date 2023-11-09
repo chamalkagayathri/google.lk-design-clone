@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: arial;
+        }
+        #header{
+            text-align: right;
+            padding-right: 20px;
+            padding-top: 8px;
+            background-color: aqua;
+            height: 60px;
+        }
+        .g-i{
+            font-family: arial;
+            color: black;
+            font-size: 13px;
+            position: absolute;
+            top: 20px;
+        }
+        #gmail{
+            right: 200px;
+        }
+        #images{
+            right: 250px;
+        }
+        .g-i:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #apps{
+            color: rgb(101, 98, 98);
+            position: absolute;
+            right: 145px;
+            top: 10px;
+            padding: 5px;
+
+        }
+        #apps:hover{
+            cursor: pointer;
+            background-color: rgb(238, 238, 238);
+            border-radius: 90px;
+        }
+        #btn-signin{
+            height: 35px;
+            width: 100px;
+            background-color: rgb(83, 118, 241);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+        #btn-signin:hover{
+            cursor: pointer;
+            background-color: rgb(68, 68, 145)
+        }
+        #image{
+            position: absolute;
+            width: 270px;
+            top: 175px;
+            left: 600px;
+        }
+        #search-field{
+            width: 570px;
+            height: 50px;
+            border: 0.2px solid rgb(198, 194, 194);
+            border-radius: 30px;
+            position: absolute;
+            top: 280px;
+            left: 450px;
+        }
+        #search-field:hover{
+            box-shadow: 1px 1px 1px 1px rgb(189, 186, 186);
+        }
+        #text-field{
+            border: none;
+            outline: none;
+            position: absolute;
+            left: 45px;
+            top:7px;
+            width: 440px;
+            height: 35px;
+            font-size: 1.1rem;
+        }
+        #search{
+            color: rgb(170, 165, 165);
+            position: absolute;
+            left: 15px;
+            top: 15px;
+        }
+        #recorder{
+            height: 25px;
+            width: 25px;
+            position: absolute;
+            right: 53px;
+            top: 10px;
+        }
+        #recorder:hover{
+            cursor: pointer;
+        }
+        #saveimg{
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            right: 10px;
+            top: 8px;
+        }
+        #saveimg:hover{
+            cursor: pointer;
+        }
+        .btns{
+            position: absolute;
+            top: 360px;
+            height: 40px;
+            width: 120px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(247, 247, 247);
+        }
+        .btns:hover{
+            cursor: pointer;
+            box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(189, 186, 186);
+        }
+        #btn-google-search{
+            left: 600px;
+        }
+        #btn-feeling-lucky{
+            left: 745px;
+        }
+        #google-offered{
+            font-family: arial;
+            font-size: 0.8rem;
+            position: absolute;
+            left: 650px;
+            top: 430px;
+        }
+        #sinhala{
+            position: absolute;
+            top: 430px;
+            font-size: 0.8rem;
+            left: 760px;
+            color: blue;
+        }
+        #sinhala:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #tamil{
+            position: absolute;
+            top: 430px;
+            font-size: 0.8rem;
+            left: 805px;
+            color: blue;
+        }
+        #tamil:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .footer{
+            height: 50px;
+            width: 100%;
+            background-color: rgb(232, 230, 230);
+            position: absolute;  
+        }
+        #foot1{
+            top: 659.5px;
+        }
+        #foot2{
+            border-top: 0.5px solid rgb(171, 171, 171);
+            top: 710px;
+        }
+        #sri-lanka{
+            font-family: arial;
+            color: gray;
+            font-size: 1rem;
+            position: absolute;
+            top: 18px;
+            left: 29px;
+        }
+        .foot2-items{
+            position: absolute;
+            font-family: arial;
+            color: gray;
+            font-size: 0.9rem;
+            padding-top: 18px;
+            left: 29px;
+        }
+        .foot2-items:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+        <span id="gmail" class="g-i">Images</span>
+        <span id="images"  class="g-i">Gmail</span>
+        <span title="Google apps" id="apps" class="material-symbols-outlined">apps</span>
+        <span><button id="btn-signin">Sign in</button></span>
+        <img id="image" src="google.png" alt="">
+        <form action="https://www.google.com/search">
+            <div id="search-field">
+                <input title="Search" id="text-field" type="text" name="q">
+                <ion-icon id="search" name="search-outline"></ion-icon>
+                <img id="recorder" title="Search by voice" src="recorder.png" alt="">
+                <img id="saveimg" title="Search by image"  src="saveimg.png" alt="">
+            </div>
+            <button id="btn-google-search" class="btns">Google Search</button>
+            <button id="btn-feeling-lucky" class="btns" type="button">I'm Feeling Lucky</button>
+        </form>
+        <h1 id="google-offered">Google offered in: </h1>
+        <h1 id="sinhala">සිංහල</h1>
+        <h1 id="tamil">தமிழ்</h1>
+        <div id="foot1" class="footer">
+            <h1 id="sri-lanka">Sri Lanka</h1>
+        </div>
+        <div id="foot2" class="footer">
+            <span style="left: 30px;" class="foot2-items">About</span>
+            <span style="left: 100px;"  class="foot2-items">Advertising</span>
+            <span style="left: 200px;"  class="foot2-items">Business</span>
+            <span style="left: 290px;"  class="foot2-items">How Search works</span>
+            <span style="left: 1260px;"  class="foot2-items">Privacy</span>
+            <span style="left: 1330px;"  class="foot2-items">Terms</span>
+            <span  style="left: 1400px;" class="foot2-items">Settings</span>
+        </div>
+</body>
+</html>
